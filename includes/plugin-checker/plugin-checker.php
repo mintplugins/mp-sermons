@@ -92,7 +92,6 @@ if ( !class_exists( 'MP_CORE_Plugin_Checker' ) ){
 			if ($this->_args['plugin_required'] == false){
 				echo '<form id="mp_core_plugin_checker_close_notice" method="post" style="display:inline-block; margin-left:.7em;">
 							<input type="hidden" name="mp_core_plugin_checker_' . $this->_args['plugin_slug'] . '" value="false"/>
-							' . wp_nonce_field('mp_core_plugin_checker_' . $this->_args['plugin_slug'] . '_nonce','mp_core_plugin_checker_' . $this->_args['plugin_slug'] . '_nonce_field') . '
 							<input type="submit" id="mp_core_plugin_checker_dismiss" class="button" value="Dismiss" /> 
 					   </form>'; 
 			}
@@ -104,11 +103,7 @@ if ( !class_exists( 'MP_CORE_Plugin_Checker' ) ){
 		 */
 		 public function mp_core_close_message(){
 			if (isset($_POST['mp_core_plugin_checker_' . $this->_args['plugin_slug']])){
-				//verify nonce
-				if (wp_verify_nonce($_POST['mp_core_plugin_checker_' . $this->_args['plugin_slug'] . '_nonce_field'],'mp_core_plugin_checker_' . $this->_args['plugin_slug'] . '_nonce') ){
-					//update option to not show this message
-					update_option( 'mp_core_plugin_checker_' . $this->_args['plugin_slug'], "false" );
-				}
+				update_option( 'mp_core_plugin_checker_' . $this->_args['plugin_slug'], "false" );
 			}
 		 }
 	
@@ -197,7 +192,7 @@ if ( !class_exists( 'MP_CORE_Plugin_Checker' ) ){
 			$created_file = $wp_filesystem->put_contents( $filename, $saved_file, FS_CHMOD_FILE);
 			
 			//Unzip the temp zip file
-			unzip_file($filename, trailingslashit($upload_dir) . '/' . $this->_args['plugin_slug']);
+			unzip_file($filename, trailingslashit($upload_dir));
 			
 			//Delete the temp zipped file
 			$wp_filesystem->rmdir($filename);
@@ -222,4 +217,3 @@ if ( !class_exists( 'MP_CORE_Plugin_Checker' ) ){
 
 	}
 }
-

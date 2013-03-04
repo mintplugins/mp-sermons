@@ -96,56 +96,58 @@ add_action( 'init', 'mp_sermons_textdomain', 1 );
 | INCLUDES
 |--------------------------------------------------------------------------
 */
-
-/**
- * If mp_core isn't active, stop and install it now
- */
-if (!function_exists('mp_core_textdomain')){
-	
+function mp_sermons_include_files(){
 	/**
-	 * Include Plugin Checker
+	 * If mp_core isn't active, stop and install it now
 	 */
-	require( MP_SERMONS_PLUGIN_DIR . 'includes/plugin-checker/plugin-checker.php' );
-	
-	/**
-	 * Check if wp_core in installed
-	 */
-	require( MP_SERMONS_PLUGIN_DIR . 'includes/plugin-checker/included-plugins/mp-core-check.php' );
-	
-}
-/**
- * Otherwise, if mp_core is active, carry out the plugin's functions
- */
-else{
-	
-	/**
-	 * Settings Metabox for mp_sermons
-	 */
-	require( MP_SERMONS_PLUGIN_DIR . 'includes/metaboxes/mp-sermon-meta/mp-sermon-meta.php' );
-	
-	/**
-	 * People Custom Post Type
-	 */
-	require( MP_SERMONS_PLUGIN_DIR . 'includes/custom-post-types/sermons.php' );
-	
-	/**
-	 * Settings for mp_sermons
-	 */
-	require( MP_SERMONS_PLUGIN_DIR . 'includes/settings/settings/settings-options.php' );
-	
-	/**
-	 * Podcast Settings for mp_sermons
-	 */
-	require( MP_SERMONS_PLUGIN_DIR . 'includes/settings/podcast/podcast-options.php' );
-	
-	/**
-	 * Template Tags for mp_sermons
-	 */
-	require( MP_SERMONS_PLUGIN_DIR . 'includes/template-tags/template-tags.php' );
-	
-	/**
-	 * Enqueue Bib.ly scripts mp_sermons
-	 */
-	require( MP_SERMONS_PLUGIN_DIR . 'includes/misc-functions/enqueue-bibly.php' );
+	if (!function_exists('mp_core_textdomain')){
 		
+		/**
+		 * Include Plugin Checker
+		 */
+		require( MP_SERMONS_PLUGIN_DIR . 'includes/plugin-checker/plugin-checker.php' );
+		
+		/**
+		 * Check if wp_core in installed
+		 */
+		require( MP_SERMONS_PLUGIN_DIR . 'includes/plugin-checker/included-plugins/mp-core-check.php' );
+		
+	}
+	/**
+	 * Otherwise, if mp_core is active, carry out the plugin's functions
+	 */
+	else{
+		
+		/**
+		 * Settings Metabox for mp_sermons
+		 */
+		require( MP_SERMONS_PLUGIN_DIR . 'includes/metaboxes/mp-sermon-meta/mp-sermon-meta.php' );
+		
+		/**
+		 * People Custom Post Type
+		 */
+		require( MP_SERMONS_PLUGIN_DIR . 'includes/custom-post-types/sermons.php' );
+		
+		/**
+		 * Settings for mp_sermons
+		 */
+		require( MP_SERMONS_PLUGIN_DIR . 'includes/settings/settings/settings-options.php' );
+		
+		/**
+		 * Podcast Settings for mp_sermons
+		 */
+		require( MP_SERMONS_PLUGIN_DIR . 'includes/settings/podcast/podcast-options.php' );
+		
+		/**
+		 * Template Tags for mp_sermons
+		 */
+		require( MP_SERMONS_PLUGIN_DIR . 'includes/template-tags/template-tags.php' );
+		
+		/**
+		 * Enqueue Bib.ly scripts mp_sermons
+		 */
+		require( MP_SERMONS_PLUGIN_DIR . 'includes/misc-functions/enqueue-bibly.php' );
+			
+	}
 }
+add_action('plugins_loaded', 'mp_sermons_include_files');
