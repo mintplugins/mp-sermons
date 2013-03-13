@@ -29,6 +29,6 @@ function mp_sermon_settings(){
 	include_once( 'settings-tab-general.php' );
 	
 	//Include other option tabs
-	//include_once( 'settings-tab-display.php' );
+	include_once( 'settings-tab-media.php' );
 }
 add_action('plugins_loaded', 'mp_sermon_settings');

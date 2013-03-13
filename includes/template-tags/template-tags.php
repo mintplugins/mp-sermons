@@ -1,30 +1,29 @@
 <?php
 /**
- * Template tag to display bible verse
+ * Template tag to display podcast link
  */
-function mp_sermons_html5_mp3($post_id){
+function mp_sermons_podcast_url($feed_prefix = 'http://', $podcast_source = NULL){
 	
-	$sermon_mp3 = get_post_meta($post_id, 'sermon_mp3', true);
-	
-	if (!empty($sermon_mp3)){
-		$mp3_html = '<div class="sermon_mp3_container">';
-			$mp3_html .= '<audio class="sermon_mp3" >';
-				$mp3_html .= '<source src="' . $sermon_mp3 . '" type="audio/mpeg">';
-				$mp3_html .= 'Your browser does not support the audio element.';
-			$mp3_html .= '</audio>';
-		$mp3_html .= '</div>';
-		
-		//Controls
-		$mp3_html .= '<p class="player">';
-		$mp3_html .= '<span id="playtoggle" />';
-		$mp3_html .= '<span id="gutter">';
-			$mp3_html .= '<span id="loading" />';
-			$mp3_html .= '<span id="handle" class="ui-slider-handle" />';
-		$mp3_html .= '</span>';
-		$mp3_html .= '<span id="timeleft" />';
-		$mp3_html .= '</p>';
-		
-		
-		return $mp3_html;
+	//Check if podcast source has been set - if so, load the custom post type based on the slug
+	if (isset($podcast_source)){
+		$url = get_post_type_archive_link( $podcast_source ); // $podcast_source = 'custom_post_type_slug'
+		$url = str_replace("http://", $feed_prefix, $url );
+	}else{
+		//Get the URL path of the current page
+		$url = $feed_prefix . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 	}
+	
+	//Add the query args to the current page's permalink
+	$podcast_url = add_query_arg('mp_sermon_podcast', 'true', $url);
+	
+	return $podcast_url; 		
 }
+
+/**
+ * Sample Calls:
+ *
+ * mp_sermons_podcast_url('itpc://', 'mp_sermon'); <-- This will create a podcast page that shows all sermons
+ *
+ * mp_sermons_podcast_url('itpc://'); <-- This will create a podcast page using the loop on the page where it has been called
+ *
+ */

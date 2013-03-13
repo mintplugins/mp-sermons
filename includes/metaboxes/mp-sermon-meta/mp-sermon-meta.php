@@ -32,23 +32,6 @@ function mp_sermons_create_meta_box(){
 			'field_description' 	=> $mp_sermons_thumbnail_description,
 			'field_type' 	=> 'mediaupload',
 			'field_value' => '',
-			'field_repeater' => 'sermons'
-		),
-		array(
-			'field_id'			=> 'mp3',
-			'field_title' 	=> __( 'Sermon MP3', 'mp_sermons'),
-			'field_description' 	=> 'Insert your sermon\'s MP3 file here',
-			'field_type' 	=> 'mediaupload',
-			'field_value' => '',
-			'field_repeater' => 'sermons'
-		),
-		array(
-			'field_id'			=> 'm4v',
-			'field_title' 	=> __( 'Sermon Mp4 Video File', 'mp_sermons'),
-			'field_description' 	=> 'Insert your sermon\'s M4V file here',
-			'field_type' 	=> 'mediaupload',
-			'field_value' => '',
-			'field_repeater' => 'sermons'
 		),
 		array(
 			'field_id'			=> 'sermon_video_url',
@@ -56,7 +39,6 @@ function mp_sermons_create_meta_box(){
 			'field_description' 	=> 'If you have uploaded your sermon to YouTube, Vimeo, or any other online video service, enter the URL to the video page here.',
 			'field_type' 	=> 'url',
 			'field_value' => '',
-			'field_repeater' => 'sermons'
 		),
 		array(
 			'field_id'			=> 'sermon_bible_verses',
@@ -64,7 +46,6 @@ function mp_sermons_create_meta_box(){
 			'field_description' 	=> 'Enter the bible verses used in this sermon. EG:',
 			'field_type' 	=> 'textbox',
 			'field_value' => '',
-			'field_repeater' => 'sermons'
 		),
 	);
 	

@@ -114,7 +114,18 @@ function mp_sermons_include_files(){
 		
 	}
 	/**
-	 * Otherwise, if mp_core is active, carry out the plugin's functions
+	 * Otherwise, check for mp_jplayer
+	 */
+	elseif(!function_exists('mp_jplayer_textdomain')){
+		
+		/**
+		 * Check if mp_jplayer in installed
+		 */
+		require( MP_SERMONS_PLUGIN_DIR . 'includes/plugin-checker/included-plugins/mp-jplayer-check.php' );
+		
+	}
+	/**
+	 * Otherwise, if mp_core, mp_jplayer, and mp_people are active, carry out the plugin's functions
 	 */
 	else{
 		
@@ -122,6 +133,16 @@ function mp_sermons_include_files(){
 		 * Settings Metabox for mp_sermons
 		 */
 		require( MP_SERMONS_PLUGIN_DIR . 'includes/metaboxes/mp-sermon-meta/mp-sermon-meta.php' );
+		
+		/**
+		 * Media Metabox for mp_sermons
+		 */
+		require( MP_SERMONS_PLUGIN_DIR . 'includes/metaboxes/mp-sermon-media/mp-sermon-media.php' );
+		
+		/**
+		 * Embed Metabox for mp_sermons
+		 */
+		require( MP_SERMONS_PLUGIN_DIR . 'includes/metaboxes/mp-sermon-embed/mp-sermon-embed.php' );
 		
 		/**
 		 * People Custom Post Type
@@ -147,7 +168,12 @@ function mp_sermons_include_files(){
 		 * Enqueue Bib.ly scripts mp_sermons
 		 */
 		require( MP_SERMONS_PLUGIN_DIR . 'includes/misc-functions/enqueue-bibly.php' );
+		
+		/**
+		 * Create Podcast
+		 */
+		require( MP_SERMONS_PLUGIN_DIR . 'includes/misc-functions/podcast.php' );
 			
 	}
 }
-add_action('plugins_loaded', 'mp_sermons_include_files');
+add_action('plugins_loaded', 'mp_sermons_include_files', 9);
