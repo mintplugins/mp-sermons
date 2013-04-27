@@ -1,10 +1,10 @@
 <?php
 /*
-Plugin Name: Move Plugins - Sermons
+Plugin Name: MP Sermons
 Plugin URI: http://moveplugins.com
 Description: Save sermons in series' with audio, video, text and more. 
 Version: 1.0
-Author: Phil Johnston
+Author: Move Plugins
 Author URI: http://moveplugins.com
 Text Domain: mp_sermons
 Domain Path: languages
@@ -128,6 +128,11 @@ function mp_sermons_include_files(){
 	 * Otherwise, if mp_core, mp_jplayer, and mp_people are active, carry out the plugin's functions
 	 */
 	else{
+		
+		/**
+		 * Update script - keeps this plugin up to date
+		 */
+		require( MP_SERMONS_PLUGIN_DIR . 'includes/updater/mp-sermons-update.php' );
 		
 		/**
 		 * Settings Metabox for mp_sermons
