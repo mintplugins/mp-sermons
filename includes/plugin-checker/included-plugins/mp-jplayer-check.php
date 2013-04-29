@@ -11,7 +11,7 @@
 			'plugin_slug' => 'mp-jplayer', 
 			'plugin_filename' => 'mp-jplayer.php',
 			'plugin_required' => true,
-			'plugin_download_link' => 'http://moveplugins.com/repo/move-plugins-jplayer/?download=true'
+			'plugin_download_link' => 'http://moveplugins.com/repo/mp-jplayer/?download=true'
 		);
 		$mp_jplayer_plugin_check = new MP_CORE_Plugin_Checker($args);
 	}
