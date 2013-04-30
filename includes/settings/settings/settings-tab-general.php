@@ -11,11 +11,24 @@
  * http://moveplugins.com/settings-class/
  */
 
+
 /**
 * Create new tab
 */
-$mp_sermon_settings->mp_core_new_tab(__('Sermon Settings' , 'my_plugin'), 'general');
+function mp_sermon_settings_general_new_tab( $active_tab ){
+	
+	//Create array containing the title and slug for this new tab
+	$tab_info = array( 'title' => __('Sermon Settings' , 'mp_sermons'), 'slug' => 'general' );
+	
+	global $mp_sermon_settings; $mp_sermon_settings->new_tab( $active_tab, $tab_info );
+		
+}
+//Hook into the new tab hook filter contained in the settings class in the Move Plugins Core
+add_action('mp_sermon_settings_new_tab_hook', 'mp_sermon_settings_general_new_tab');
 
+/**
+* Create settings
+*/
 function mp_sermon_settings_general_create(){
 	
 	//This variable must be the name of the variable that stores the class.
@@ -29,14 +42,14 @@ function mp_sermon_settings_general_create(){
 	
 	add_settings_section(
 		'general_settings',
-		__( 'General Settings', 'mt_malachi' ),
+		__( 'General Settings', 'mp_sermons' ),
 		'__return_false',
 		'mp_sermon_settings_general'
 	);
 	
 	add_settings_field(
 		'mp_sermons_bibly_popup',
-		__( 'Bible Verse Popups', 'mt_malachi' ), 
+		__( 'Bible Verse Popups', 'mp_sermons' ), 
 		'mp_core_checkbox',
 		'mp_sermon_settings_general',
 		'general_settings',
@@ -44,7 +57,7 @@ function mp_sermon_settings_general_create(){
 			'name'        => 'mp_sermons_bibly_popup',
 			'value'       => mp_core_get_option( 'mp_sermon_settings_general',  'mp_sermons_bibly_popup' ),
 			'preset_value'       => "popup",
-			'description' => __( 'Do you want the bible verses to popup when rolled over?', 'mt_malachi' ),
+			'description' => __( 'Do you want the bible verses to popup when rolled over?', 'mp_sermons' ),
 			'registration'=> 'mp_sermon_settings_general',
 		)
 	);
