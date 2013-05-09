@@ -105,7 +105,7 @@ function mp_sermons_include_files(){
 		/**
 		 * Include Plugin Checker
 		 */
-		require( MP_SERMONS_PLUGIN_DIR . 'includes/plugin-checker/plugin-checker.php' );
+		require( MP_SERMONS_PLUGIN_DIR . 'includes/plugin-checker/class-plugin-checker.php' );
 		
 		/**
 		 * Check if wp_core in installed
@@ -165,14 +165,19 @@ function mp_sermons_include_files(){
 		require( MP_SERMONS_PLUGIN_DIR . 'includes/settings/podcast/podcast-options.php' );
 		
 		/**
+		 * Sermon Widget
+		 */
+		require( MP_SERMONS_PLUGIN_DIR . 'includes/widgets/class-latest-sermon.php' );
+		
+		/**
 		 * Template Tags for mp_sermons
 		 */
 		require( MP_SERMONS_PLUGIN_DIR . 'includes/template-tags/template-tags.php' );
 		
 		/**
-		 * Enqueue Bib.ly scripts mp_sermons
+		 * Enqueue scripts for mp_sermons
 		 */
-		require( MP_SERMONS_PLUGIN_DIR . 'includes/misc-functions/enqueue-bibly.php' );
+		require( MP_SERMONS_PLUGIN_DIR . 'includes/misc-functions/enqueue-scripts.php' );
 		
 		/**
 		 * Create Podcast

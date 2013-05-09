@@ -45,7 +45,7 @@ function mp_sermons_post_type() {
 		); 
 		register_post_type( 'mp_sermon', apply_filters( 'mp_sermons_people_post_type_args', $sermon_args ) );
 }
-add_action( 'init', 'mp_sermons_post_type', 100 );
+add_action( 'init', 'mp_sermons_post_type', 0 );
 
 /**
  * Change default title
@@ -67,7 +67,7 @@ add_filter( 'enter_title_here', 'mp_sermons_change_default_title' );
 function mp_sermons_remove_jplayer_menu() {
 	remove_menu_page('edit.php?post_type=mp_jplayer');
 }
-add_action( 'admin_menu', 'mp_sermons_remove_jplayer_menu' );
+//add_action( 'admin_menu', 'mp_sermons_remove_jplayer_menu' );
 
 /**
  * Preacher Taxonomy

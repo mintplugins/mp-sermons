@@ -86,8 +86,10 @@ function mp_sermons_podcast(){
 						<itunes:subtitle><?php echo the_title(); ?></itunes:subtitle>
 						
 						<itunes:summary><?php echo the_excerpt_rss(); ?></itunes:summary>
+                        
+                        <?php $featured_image = mp_core_the_featured_image(get_the_ID(), 600, 600); ?>
 						
-						<itunes:image href="<?php echo !empty($item['poster']) ? mp_aq_resize($item['poster'], 600, 600, true) : mp_the_featured_image(get_the_ID(), 600, 600); ?>" />
+						<itunes:image href="<?php echo !empty($item['poster']) ? mp_aq_resize($item['poster'], 600, 600, true) : !empty ($featured_image) ? $featured_image : ''; ?>" />
 						
 						<enclosure url="<?php echo $item['mp3']; ?>" length="8727310" type="audio/mpeg" />
 						
