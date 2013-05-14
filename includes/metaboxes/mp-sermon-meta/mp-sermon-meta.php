@@ -27,13 +27,6 @@ function mp_sermons_create_meta_box(){
 	 */
 	$mp_sermons_items_array = array(
 		array(
-			'field_id'			=> 'sermon_thumbnail',
-			'field_title' 	=> __( 'Sermon\'s Thumbnail', 'mp_sermons'),
-			'field_description' 	=> $mp_sermons_thumbnail_description,
-			'field_type' 	=> 'mediaupload',
-			'field_value' => '',
-		),
-		array(
 			'field_id'			=> 'sermon_video_url',
 			'field_title' 	=> __( 'Sermon Video URL', 'mp_sermons'),
 			'field_description' 	=> 'If you have uploaded your sermon to YouTube, Vimeo, or any other online video service, enter the URL to the video page here.',

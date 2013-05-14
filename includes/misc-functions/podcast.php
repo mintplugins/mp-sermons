@@ -59,7 +59,7 @@ function mp_sermons_podcast(){
 		
 		</itunes:owner>
 		
-		<itunes:image href="<?php echo !empty($podcast_image) ? $podcast_image : mp_get_avatar_url( get_avatar( get_bloginfo( 'admin_email' ), 1400 ) ); ?>" />
+		<itunes:image href="<?php echo !empty($podcast_image) ? $podcast_image : mp_core_get_avatar_url( get_avatar( get_bloginfo( 'admin_email' ), 1400 ) ); ?>" />
 		
 		<itunes:category text="<?php echo !empty($podcast_cat1) ? $podcast_cat1 : 'Arts' ; ?>">
 		

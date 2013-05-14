@@ -135,6 +135,11 @@ function mp_sermons_include_files(){
 		require( MP_SERMONS_PLUGIN_DIR . 'includes/updater/mp-sermons-update.php' );
 		
 		/**
+		 * The Sermon function
+		 */
+		require( MP_SERMONS_PLUGIN_DIR . 'includes/misc-functions/the-sermon.php' );
+		
+		/**
 		 * Settings Metabox for mp_sermons
 		 */
 		require( MP_SERMONS_PLUGIN_DIR . 'includes/metaboxes/mp-sermon-meta/mp-sermon-meta.php' );
@@ -167,7 +172,7 @@ function mp_sermons_include_files(){
 		/**
 		 * Sermon Widget
 		 */
-		require( MP_SERMONS_PLUGIN_DIR . 'includes/widgets/class-latest-sermon.php' );
+		require( MP_SERMONS_PLUGIN_DIR . 'includes/widgets/class-sermon.php' );
 		
 		/**
 		 * Template Tags for mp_sermons

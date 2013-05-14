@@ -41,7 +41,7 @@ function mp_sermons_post_type() {
 			'capability_type' 	=> 'post',
 			'has_archive' 		=> true, 
 			'hierarchical' 		=> false,
-			'supports' 			=> apply_filters('mp_sermons_people_supports', array( 'title', 'editor', 'thumbnail' ) ),
+			'supports' 			=> apply_filters('mp_sermons_people_supports', array( 'title', 'editor', 'thumbnail', 'comments' ) ),
 		); 
 		register_post_type( 'mp_sermon', apply_filters( 'mp_sermons_people_post_type_args', $sermon_args ) );
 }
@@ -126,10 +126,10 @@ function mp_sermons_series_taxonomy() {
 		); 	
   
 		register_taxonomy(  
-			'mp_sermons_groups',  
+			'mp_sermon_series',  
 			'mp_sermon',  
 			array(  
-				'hierarchical' => true,  
+				'hierarchical' => false,  
 				'label' => 'Sermon Series',  
 				'labels' => $labels,  
 				'query_var' => true,  
@@ -200,7 +200,7 @@ function mp_sermons_book_of_the_bible_taxonomy() {
 		); 	
   
 		register_taxonomy(  
-			'mp_books_of_the_bible',  
+			'mp_bible_books',  
 			'mp_sermon',  
 			array(  
 				'hierarchical' => false,  
@@ -208,7 +208,7 @@ function mp_sermons_book_of_the_bible_taxonomy() {
 				'labels' => $labels,  
 				'query_var' => true,  
 				'with_front' => false, 
-				'rewrite' => array('slug' => 'books_of_the_bible')  
+				'rewrite' => array('slug' => 'bible_books')  
 			)  
 		);  
 }  
