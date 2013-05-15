@@ -1,41 +1,37 @@
-=== Move Plugins Core ===
+=== MP Sermons ===
 Contributors: johnstonphilip
 Donate link: http://moveplugins.com/
 Tags: message bar, header
-Requires at least: 3.0.1
-Tested up to: 3.5
+Requires at least: 3.3
+Tested up to: 3.6
 Stable tag: 4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This plugin gives developers access to a core set of classes for creating Settings, Metaboxes, Widgets, Plugins and more.
+This plugin lets you create sermons. Complete with series, topics, preachers, bible books, responsive MP3 players, responsive videos, and more, this plugin is the complete sermon solution for WordPress.
 
 == Description ==
 
-This plugin gives developers access to a core set of classes for creating Settings, Metaboxes, Widgets, Plugins and more.
+This plugin lets you create sermons. Complete with series, topics, preachers, bible books, responsive MP3 players, responsive videos, and more, this plugin is the complete sermon solution for WordPress.
 
 
 == Installation ==
 
-This section describes how to install the plugin and get it working.
-
-1. Upload the 'message-bar' folder to the `/wp-content/plugins/` directory
-2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Go to Settings > Message Bar and fill out the options. 
+Full instructions and FAQ available at:
+http://moveplugins.com/doc/mp-sermons/
 
 == Frequently Asked Questions ==
 
-= What do I do with this?  =
-
-After you install, make sure to fill out all options under the Settings > Message Bar panel in the WordPress admin area.
+Full instructions and FAQ available at:
+http://moveplugins.com/doc/mp-sermons/
 
 == Screenshots ==
 
-1. This is a screenshot of the Message Bar in action.
+1. Making a new sermon
 
-2. This is a screenshot of the Message Bar option.
+2. Sample sermon display
 
 == Changelog ==
 
-= 1.0 =
+= 1.0.0.0 =
 * Original release
