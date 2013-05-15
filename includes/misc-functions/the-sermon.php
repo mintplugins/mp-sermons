@@ -3,9 +3,15 @@
 /**
  * Displays everything about a sermon
  */
-function mp_sermons_the_sermon($post_id){
+function mp_sermon($post_id = NULL){
 	
-	$html_output = mp_core_the_featured_image( $post_id, 254, 134, '<div class="single-featured-image"><img src="', '" width="254px" height="134px" /></div>'); 
+	//Get the global post
+	global $post;
+	
+	//If no post ID has been passed in, use the global post id		
+	$post_id = $post_id == NULL ? $post->ID : $post_id;
+	
+	$html_output = mp_core_the_featured_image( $post_id, 254, 134, '<div class="mp-sermons-featured-image"><img src="', '" width="254px" height="134px" /></div>'); 
 	
 	$html_output .= '<div class="mp-sermons-sermon-info">';
 							   

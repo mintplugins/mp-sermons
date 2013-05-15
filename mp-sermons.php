@@ -188,6 +188,16 @@ function mp_sermons_include_files(){
 		 * Create Podcast
 		 */
 		require( MP_SERMONS_PLUGIN_DIR . 'includes/misc-functions/podcast.php' );
+		
+		/**
+		 * Shortcodes
+		 */
+		require( MP_SERMONS_PLUGIN_DIR . 'includes/misc-functions/shortcodes.php' );
+		
+		/**
+		 * Misc Functions
+		 */
+		require( MP_SERMONS_PLUGIN_DIR . 'includes/misc-functions/misc-functions.php' );
 			
 	}
 }

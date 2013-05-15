@@ -36,7 +36,7 @@ function mp_sermons_create_meta_box(){
 		array(
 			'field_id'			=> 'sermon_bible_verses',
 			'field_title' 	=> __( 'Sermon Bible Verses', 'mp_sermons'),
-			'field_description' 	=> 'Enter the bible verses used in this sermon. EG:',
+			'field_description' 	=> 'Enter the bible verses used in this sermon. EG: Galatians 5:1-10',
 			'field_type' 	=> 'textbox',
 			'field_value' => '',
 		),

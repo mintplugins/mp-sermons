@@ -10,7 +10,7 @@ class MP_SERMONS_Widget extends MP_CORE_Widget {
 	public function __construct() {
 		parent::__construct(
 	 		'mp_sermons_widget', // Base ID
-			'Sermon Widget', // Name
+			'MP Sermon', // Name
 			array( 'description' => __( 'Display A Sermon', 'mp_sermons' ), ) // Args
 		);
 		
