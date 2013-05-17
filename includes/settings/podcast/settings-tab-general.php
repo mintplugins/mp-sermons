@@ -55,7 +55,7 @@ function mp_sermon_podcast_settings_general_create(){
 		array(
 			'name'        => 'mp_sermons_podcast_title',
 			'value'       => mp_core_get_option( 'mp_sermon_podcast_settings_general',  'mp_sermons_podcast_title' ),
-			'description' => __( 'Enter the title of your general.', 'mp_sermons' ),
+			'description' => __( 'Enter the title of your podcast.', 'mp_sermons' ),
 			'registration'=> 'mp_sermon_podcast_settings_general',
 		)
 	);
@@ -69,7 +69,7 @@ function mp_sermon_podcast_settings_general_create(){
 		array(
 			'name'        => 'mp_sermons_podcast_subtitle',
 			'value'       => mp_core_get_option( 'mp_sermon_podcast_settings_general',  'mp_sermons_podcast_subtitle' ),
-			'description' => __( 'Enter a short subtitle for the general.', 'mp_sermons' ),
+			'description' => __( 'Enter a short subtitle for the podcast.', 'mp_sermons' ),
 			'registration'=> 'mp_sermon_podcast_settings_general',
 		)
 	);
@@ -83,7 +83,7 @@ function mp_sermon_podcast_settings_general_create(){
 		array(
 			'name'        => 'mp_sermons_podcast_author',
 			'value'       => mp_core_get_option( 'mp_sermon_podcast_settings_general',  'mp_sermons_podcast_author' ),
-			'description' => __( 'Enter the author of the general.', 'mp_sermons' ),
+			'description' => __( 'Enter the author of the podcast.', 'mp_sermons' ),
 			'registration'=> 'mp_sermon_podcast_settings_general',
 		)
 	);
@@ -97,7 +97,7 @@ function mp_sermon_podcast_settings_general_create(){
 		array(
 			'name'        => 'mp_sermons_podcast_description',
 			'value'       => mp_core_get_option( 'mp_sermon_podcast_settings_general',  'mp_sermons_podcast_description' ),
-			'description' => __( 'Enter the description of the general.', 'mp_sermons' ),
+			'description' => __( 'Enter the description of the podcast.', 'mp_sermons' ),
 			'registration'=> 'mp_sermon_podcast_settings_general',
 		)
 	);
@@ -125,7 +125,7 @@ function mp_sermon_podcast_settings_general_create(){
 		array(
 			'name'        => 'mp_sermons_podcast_image',
 			'value'       => mp_core_get_option( 'mp_sermon_podcast_settings_general',  'mp_sermons_podcast_image' ),
-			'description' => __( 'Upload an image to represent the general. Recommended size 600 x 600 Pixels', 'mp_sermons' ),
+			'description' => __( 'Upload an image to represent the podcast. Recommended size 600 x 600 Pixels', 'mp_sermons' ),
 			'registration'=> 'mp_sermon_podcast_settings_general',
 		)
 	);
@@ -139,7 +139,7 @@ function mp_sermon_podcast_settings_general_create(){
 		array(
 			'name'        => 'mp_sermons_podcast_cat_1',
 			'value'       => mp_core_get_option( 'mp_sermon_podcast_settings_general',  'mp_sermons_podcast_cat_1' ),
-			'description' => __( 'Select a category for your general', 'mp_sermons' ),
+			'description' => __( 'Select a category for your podcast', 'mp_sermons' ),
 			'registration'=> 'mp_sermon_podcast_settings_general',
 			'options'      => array("Arts", "Business", "Comedy", "Education", "Games &amp; Hobbies", "Government &amp; Organizations", "Health", "Kids &amp; Family", "Music", "News &amp; Politics", "Religion &amp; Spirituality", "Science &amp; Medicine", "Society &amp; Culture", "Sports &amp; Recreation", "Technology", "TV &amp; Film")
 		)
@@ -154,7 +154,7 @@ function mp_sermon_podcast_settings_general_create(){
 		array(
 			'name'        => 'mp_sermons_podcast_cat_2',
 			'value'       => mp_core_get_option( 'mp_sermon_podcast_settings_general',  'mp_sermons_podcast_cat_2' ),
-			'description' => __( 'Select a sub-category for your general', 'mp_sermons' ),
+			'description' => __( 'Select a sub-category for your podcast', 'mp_sermons' ),
 			'registration'=> 'mp_sermon_podcast_settings_general',
 			'options'=>  array("Design", "Fashion &amp; Beauty", "Food", "Literature", "Performing Arts", "Visual Arts", "Business News", "Careers", "Investing", "Management &amp; Marketing", "Shopping", "Education", "Education Technology", "Higher Education", "K-12", "Language Courses", "Training", "Automotive", "Aviation", "Hobbies", "Other Games", "Video Games", "Local", "National", "Non-Profit", "Regional", "Alternative Health", "Fitness &amp; Nutrition", "Self-Help", "Sexuality", "Buddhism", "Christianity", "Hinduism", "Islam", "Judaism", "Other", "Spirituality", "Medicine", "Natural Sciences", "Social Sciences", "History", "Personal Journals", "Philosophy", "Places &amp; Travel", "Amateur", "College &amp; High School", "Outdoor", "Professional", "Gadgets", "Tech News", "Podcasting", "Software How-To")
 		)

@@ -31,8 +31,6 @@ add_action('mp_sermon_settings_new_tab_hook', 'mp_sermon_settings_general_new_ta
 */
 function mp_sermon_settings_general_create(){
 	
-	//This variable must be the name of the variable that stores the class.
-	global $mp_sermon_settings_class;
 	
 	register_setting(
 		'mp_sermon_settings_general',

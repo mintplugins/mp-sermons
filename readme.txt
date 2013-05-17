@@ -33,5 +33,8 @@ http://moveplugins.com/doc/mp-sermons/
 
 == Changelog ==
 
+= 1.0.0.1 = May 17, 2013
+* Changed updates and plugin check from moveplugins.com to repo.moveplugins.com
+
 = 1.0.0.0 =
 * Original release
