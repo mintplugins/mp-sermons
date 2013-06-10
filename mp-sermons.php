@@ -3,7 +3,7 @@
 Plugin Name: MP Sermons
 Plugin URI: http://moveplugins.com
 Description: Save sermons in series' with audio, video, text and more. 
-Version: 1.0.0.1
+Version: 1.0.0.2
 Author: Move Plugins
 Author URI: http://moveplugins.com
 Text Domain: mp_sermons
