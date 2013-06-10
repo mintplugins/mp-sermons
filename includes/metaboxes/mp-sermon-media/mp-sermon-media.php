@@ -98,7 +98,7 @@ function mp_sermons_media_create_meta_box(){
 			'field_title' 	=> __( 'Downloadable', 'mp_jplayer'),
 			'field_description' 	=> 'Is this media file able to be downloaded?',
 			'field_type' 	=> 'checkbox',
-			'field_value' => 'true',
+			'field_value' => '',
 			'field_repeater' => 'jplayer'
 		)
 	);
