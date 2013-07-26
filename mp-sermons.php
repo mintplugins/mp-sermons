@@ -3,7 +3,7 @@
 Plugin Name: MP Sermons
 Plugin URI: http://moveplugins.com
 Description: Save sermons in series' with audio, video, text and more. 
-Version: 1.0.0.2
+Version: 1.0.0.3
 Author: Move Plugins
 Author URI: http://moveplugins.com
 Text Domain: mp_sermons
@@ -105,7 +105,12 @@ function mp_sermons_include_files(){
 		/**
 		 * Include Plugin Checker
 		 */
-		require( MP_SERMONS_PLUGIN_DIR . 'includes/plugin-checker/class-plugin-checker.php' );
+		require( MP_SERMONS_PLUGIN_DIR . '/includes/plugin-checker/class-plugin-checker.php' );
+		
+		/**
+		 * Include Plugin Installer
+		 */
+		require( MP_SERMONS_PLUGIN_DIR . '/includes/plugin-checker/class-plugin-installer.php' );
 		
 		/**
 		 * Check if wp_core in installed
