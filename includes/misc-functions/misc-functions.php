@@ -5,7 +5,7 @@
  */
 function mp_sermons_theme_support($content){
 	
-	if ( !current_theme_supports( 'mp_sermons' ) ){
+	if ( !current_theme_supports( 'mp_sermons' ) &&  'mp_sermon' == get_post_type() ){
 		return mp_sermon() . $content;
 	}
 	else{
