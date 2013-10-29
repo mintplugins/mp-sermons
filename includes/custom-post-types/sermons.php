@@ -40,7 +40,7 @@ function mp_sermons_post_type() {
 			'rewrite' 			=> array( 'slug' => 'sermons' ),
 			'capability_type' 	=> 'post',
 			'has_archive' 		=> true, 
-			'hierarchical' 		=> false,
+			'hierarchical' 		=> true,
 			'supports' 			=> apply_filters('mp_sermons_people_supports', array( 'title', 'editor', 'thumbnail', 'comments' ) ),
 		); 
 		register_post_type( 'mp_sermon', apply_filters( 'mp_sermons_people_post_type_args', $sermon_args ) );
