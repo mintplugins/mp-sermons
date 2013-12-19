@@ -35,35 +35,35 @@ function mp_sermons_podcast(){
 		
 		<channel>
 		
-		<title><?php echo !empty($podcast_title) ? $podcast_title : get_bloginfo(); ?></title>
+		<title><?php echo !empty($podcast_title) ? htmlentities( $podcast_title ) : htmlentities( get_bloginfo() ); ?></title>
 		
-		<link><?php echo get_bloginfo('url')  ?></link>
+		<link><?php echo htmlentities( get_bloginfo('url') ) ?></link>
 		
 		<language>en-us</language>
 		
-		<copyright>&#x2117; &amp; &#xA9; <?php echo date('Y') . ' ' . get_bloginfo();  ?></copyright>
+		<copyright>&#x2117; &amp; &#xA9; <?php echo date('Y') . ' ' . htmlentities ( get_bloginfo() );  ?></copyright>
 		
-		<itunes:subtitle><?php echo !empty($podcast_subtitle) ? $podcast_subtitle : get_bloginfo(); ?></itunes:subtitle>
+		<itunes:subtitle><?php echo !empty($podcast_subtitle) ? htmlentities( $podcast_subtitle ) : htmlentities( get_bloginfo() ); ?></itunes:subtitle>
 		
-		<itunes:author><?php echo !empty($podcast_author) ? $podcast_author : get_bloginfo(); ?></itunes:author>
+		<itunes:author><?php echo !empty($podcast_author) ? htmlentities( $podcast_author ) : htmlentities( get_bloginfo() ); ?></itunes:author>
 		
-		<itunes:summary><?php echo !empty($podcast_description) ? $podcast_description : get_bloginfo(); ?></itunes:summary>
+		<itunes:summary><?php echo !empty($podcast_description) ? htmlentities( $podcast_description ) : htmlentities( get_bloginfo() ); ?></itunes:summary>
 		
-		<description><?php echo !empty($podcast_description) ? $podcast_description : get_bloginfo(); ?></description>
+		<description><?php echo !empty($podcast_description) ? htmlentities( $podcast_description ) : htmlentities( get_bloginfo() ); ?></description>
 		
 		<itunes:owner>
 		
-		<itunes:name><?php echo !empty($podcast_author) ? $podcast_author : get_bloginfo(); ?></itunes:name>
+		<itunes:name><?php echo !empty($podcast_author) ? htmlentities( $podcast_author ) : htmlentities( get_bloginfo() ); ?></itunes:name>
 		
-		<itunes:email><?php echo !empty($podcast_email) ? $podcast_email : get_bloginfo( 'admin_email' )  ?></itunes:email>
+		<itunes:email><?php echo !empty($podcast_email) ? htmlentities( $podcast_email ) : htmlentities( get_bloginfo( 'admin_email' ) )  ?></itunes:email>
 		
 		</itunes:owner>
 		
-		<itunes:image href="<?php echo !empty($podcast_image) ? $podcast_image : mp_core_get_avatar_url( get_avatar( get_bloginfo( 'admin_email' ), 1400 ) ); ?>" />
+		<itunes:image href="<?php echo !empty($podcast_image) ? htmlentities( $podcast_image ) : htmlentities( mp_core_get_avatar_url( get_avatar( get_bloginfo( 'admin_email' ), 1400 ) ) ); ?>" />
 		
-		<itunes:category text="<?php echo !empty($podcast_cat1) ? $podcast_cat1 : 'Arts' ; ?>">
+		<itunes:category text="<?php echo !empty($podcast_cat1) ? htmlentities( $podcast_cat1 ) : 'Arts' ; ?>">
 		
-		<itunes:category text="<?php echo !empty($podcast_cat2) ? $podcast_cat2 : 'Design'; ?>"/>
+		<itunes:category text="<?php echo !empty($podcast_cat2) ? htmlentities( $podcast_cat2 ) : 'Design'; ?>"/>
 		
 		</itunes:category>
 		

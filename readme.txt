@@ -33,6 +33,9 @@ http://moveplugins.com/doc/mp-sermons/
 
 == Changelog ==
 
+= 1.0.0.6 = December 19, 2013
+Added HTML Entities to all Podcasting outputs
+
 = 1.0.0.3 = July 26, 2013
 *plugin-checker/plugin-installer classes change
 
