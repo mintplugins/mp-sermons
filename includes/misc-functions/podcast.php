@@ -79,23 +79,23 @@ function mp_sermons_podcast(){
 						
 						<item>
 						
-						<title><?php echo !empty($item['title']) ? $item['title'] : the_title(); ?></title>
+						<title><?php echo !empty($item['title']) ? htmlentities( $item['title'] ) : htmlentities( the_title() ); ?></title>
 						
-						<itunes:author><?php echo get_post_meta(get_the_ID(), 'sermonauthor', true)  ?></itunes:author>
+						<itunes:author><?php echo htmlentities( get_post_meta(get_the_ID(), 'sermonauthor', true) ); ?></itunes:author>
 						
-						<itunes:subtitle><?php echo the_title(); ?></itunes:subtitle>
+						<itunes:subtitle><?php echo htmlentities( the_title() ); ?></itunes:subtitle>
 						
-						<itunes:summary><?php echo the_excerpt_rss(); ?></itunes:summary>
+						<itunes:summary><?php echo htmlentities( the_excerpt_rss() ); ?></itunes:summary>
                         
-                        <?php $featured_image = mp_core_the_featured_image(get_the_ID(), 600, 600); ?>
+                        <?php $featured_image = htmlentities(  mp_core_the_featured_image(get_the_ID(), 600, 600) ); ?>
 						
-						<itunes:image href="<?php echo !empty($item['poster']) ? mp_aq_resize($item['poster'], 600, 600, true) : !empty ($featured_image) ? $featured_image : ''; ?>" />
+						<itunes:image href="<?php echo !empty($item['poster']) ? htmlentities( mp_aq_resize($item['poster'], 600, 600, true) ) : !empty ($featured_image) ? $featured_image : ''; ?>" />
 						
-						<enclosure url="<?php echo $item['mp3']; ?>" length="8727310" type="audio/mpeg" />
+						<enclosure url="<?php echo htmlentities( $item['mp3'] ); ?>" length="8727310" type="audio/mpeg" />
 						
-						<guid><?php echo $item['mp3']  ?></guid>
+						<guid><?php echo htmlentities( $item['mp3'] );  ?></guid>
 						
-						<pubDate><?php echo the_time('r')  ?></pubDate>
+						<pubDate><?php echo htmlentities( the_time('r') );  ?></pubDate>
 						
 						</item>	
 					<?php 
