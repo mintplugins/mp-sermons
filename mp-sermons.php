@@ -3,7 +3,7 @@
 Plugin Name: MP Sermons
 Plugin URI: http://moveplugins.com
 Description: Save sermons in series' with audio, video, text and more. 
-Version: 1.0.0.7
+Version: 1.0.0.8
 Author: Move Plugins
 Author URI: http://moveplugins.com
 Text Domain: mp_sermons
@@ -11,7 +11,7 @@ Domain Path: languages
 License: GPL2
 */
 
-/*  Copyright 2012  Phil Johnston  (email : phil@moveplugins.com)
+/*  Copyright 2014  Phil Johnston  (email : phil@moveplugins.com)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as 
@@ -34,7 +34,7 @@ License: GPL2
 */
 // Plugin version
 if( !defined( 'MP_SERMONS_VERSION' ) )
-	define( 'MP_SERMONS_VERSION', '1.0.0.0' );
+	define( 'MP_SERMONS_VERSION', '1.0.0.8' );
 
 // Plugin Folder URL
 if( !defined( 'MP_SERMONS_PLUGIN_URL' ) )

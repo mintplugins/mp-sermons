@@ -36,7 +36,12 @@ function mp_sermon($post_id = NULL){
 					   
 	$html_output .= mp_jplayer($post_id, 'jplayer');
 	
-	$html_output .= mp_core_oembed_get( get_post_meta($post_id, 'sermon_video_url', true ) ); 
+	//If there is a video url enteres
+	$sermon_video_url = get_post_meta($post_id, 'sermon_video_url', true );
+	
+	if ( !empty( $sermon_video_url ) ){
+		$html_output .= mp_core_oembed_get( get_post_meta($post_id, 'sermon_video_url', true ) ); 
+	}
 	
 	return $html_output;
                             
