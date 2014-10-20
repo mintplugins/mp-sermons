@@ -2,7 +2,7 @@
 
 Contributors: johnstonphilip
 
-Donate link: http://moveplugins.com/
+Donate link: http://mintplugins.com/
 
 Tags: message bar, header
 
@@ -26,12 +26,12 @@ This plugin lets you create sermons. Complete with series, topics, preachers, bi
 == Installation ==
 
 Full instructions and FAQ available at:
-http://moveplugins.com/doc/mp-sermons/
+http://mintplugins.com/doc/mp-sermons/
 
 == Frequently Asked Questions ==
 
 Full instructions and FAQ available at:
-http://moveplugins.com/doc/mp-sermons/
+http://mintplugins.com/doc/mp-sermons/
 
 == Screenshots ==
 

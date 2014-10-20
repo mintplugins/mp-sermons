@@ -34,7 +34,7 @@ function mp_sermon($post_id = NULL){
 
 	$html_output .= '</div>';
 					   
-	$html_output .= mp_jplayer($post_id, 'jplayer');
+	$html_output .= mp_player($post_id, 'jplayer');
 	
 	//If there is a video url enteres
 	$sermon_video_url = get_post_meta($post_id, 'sermon_video_url', true );

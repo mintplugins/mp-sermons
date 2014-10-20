@@ -7,7 +7,7 @@
  * @package    MP Sermons
  * @subpackage Functions
  *
- * @copyright  Copyright (c) 2013, Move Plugins
+ * @copyright  Copyright (c) 2014, Mint Plugins
  * @license    http://opensource.org/licenses/gpl-2.0.php GNU Public License
  * @author     Philip Johnston
  */
@@ -23,7 +23,7 @@
 	function mp_sermons_update() {
 		$args = array(
 			'software_name' => 'MP Sermons', //<- The exact name of this Plugin. Make sure it matches the title in your mp_sermons, edd, and the WP.org sermons
-			'software_api_url' => 'http://moveplugins.com',//The URL where EDD and mp_sermons are installed and checked
+			'software_api_url' => 'http://mintplugins.com',//The URL where EDD and mp_sermons are installed and checked
 			'software_filename' => 'mp-sermons.php',
 			'software_licensed' => false, //<-Boolean
 		);

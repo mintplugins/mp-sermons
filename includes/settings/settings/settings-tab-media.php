@@ -8,7 +8,7 @@
  * Step 3. Go to line 17 and set the title for this tab.
  * Step 4. Begin creating your custom options on line 30
  * Go here for full setup instructions: 
- * http://moveplugins.com/settings-class/
+ * http://mintplugins.com/settings-class/
  */
 
 /**
@@ -23,7 +23,7 @@ function mp_sermon_settings_media_new_tab($active_tab){
 	$mp_sermon_settings->new_tab( $active_tab, $tab_info );
 	
 }
-//Hook into the new tab hook filter contained in the settings class in the Move Plugins Core
+//Hook into the new tab hook filter contained in the settings class in the Mint Plugins Core
 add_action('mp_sermon_settings_new_tab_hook', 'mp_sermon_settings_media_new_tab');
 
 /**
